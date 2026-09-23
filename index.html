@@ -1547,17 +1547,20 @@
       background: rgba(3, 5, 8, 0.96);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       padding: 40px;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .lightbox-curtain.active {
-      display: flex;
       opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
 
     .lightbox-stage {
@@ -1848,7 +1851,7 @@
           <!-- Hero Portrait in Architectural Frame (Preserved exactly in its own card) -->
           <div class="hero-portrait-stage reveal delay-2">
             <div class="portrait-frame">
-              <img src="photos/91bd6945-d18d-42fb-bad8-4787d4221a9a.JPG" alt="Angad Sharma — Chief Officer & Photographer" class="portrait-img" loading="eager">
+              <img src="photos/optimized/portrait.jpg" alt="Angad Sharma — Chief Officer & Photographer" class="portrait-img" loading="eager">
               <div class="portrait-meta">
                 <span class="portrait-meta-name">Angad Sharma</span>
                 <span class="portrait-meta-sub">First Mate (FG)</span>
@@ -1941,10 +1944,10 @@
         <!-- Featured Exhibition: INTERTANKO 2023 1st & 2nd Place Winners -->
         <div class="exhibition-duo">
           <!-- 1st Place Overall: Beam of Sunrays -->
-          <div class="exhibition-frame reveal delay-1" onclick="openGalleryLightbox('photos/IMG_3292.JPG', 'Beam of Sunrays', '1st Place (Overall Winner) — INTERTANKO Annual Tanker Event 2023 (Sponsored by Valles Steamship)')">
+          <div class="exhibition-frame reveal delay-1" onclick="openGalleryLightbox('photos/optimized/gallery/beam-of-sunrays.jpg', 'Beam of Sunrays', '1st Place (Overall Winner) — INTERTANKO Annual Tanker Event 2023 (Sponsored by Valles Steamship)')">
             <div class="exhibition-img-box">
               <div class="plaque-badge plaque-gold">🥇 1st Place Overall Winner</div>
-              <img src="photos/IMG_3292.JPG" alt="Beam of Sunrays — 1st Place INTERTANKO 2023" loading="lazy">
+              <img src="photos/optimized/gallery/beam-of-sunrays.jpg" alt="Beam of Sunrays — 1st Place INTERTANKO 2023" loading="lazy">
             </div>
             <div class="exhibition-caption">
               <h3 class="exhibition-title">Beam of Sunrays</h3>
@@ -1956,10 +1959,10 @@
           </div>
 
           <!-- 2nd Place: Sunrise -->
-          <div class="exhibition-frame reveal delay-2" onclick="openGalleryLightbox('photos/IMG_2713.JPG', 'Sunrise', '2nd Place Winner — INTERTANKO Annual Tanker Event 2023 (Chief Officer aboard MT Atherina, Suntech Ship Management)')">
+          <div class="exhibition-frame reveal delay-2" onclick="openGalleryLightbox('photos/optimized/gallery/sunrise.jpg', 'Sunrise', '2nd Place Winner — INTERTANKO Annual Tanker Event 2023 (Chief Officer aboard MT Atherina, Suntech Ship Management)')">
             <div class="exhibition-img-box">
               <div class="plaque-badge plaque-silver">🥈 2nd Place Winner</div>
-              <img src="photos/IMG_2713.JPG" alt="Sunrise — 2nd Place INTERTANKO 2023" loading="lazy">
+              <img src="photos/optimized/gallery/sunrise.jpg" alt="Sunrise — 2nd Place INTERTANKO 2023" loading="lazy">
             </div>
             <div class="exhibition-caption">
               <h3 class="exhibition-title">Sunrise</h3>
@@ -1979,8 +1982,8 @@
 
         <div class="gallery-masonry">
           <!-- Lightning in Gulf of Mexico (Wide 7-cols) -->
-          <div class="gallery-item col-span-7 reveal delay-1" onclick="openGalleryLightbox('photos/Lightning in Gulf Of Mexico.JPEG', 'Lightning in the Gulf of Mexico', 'Fierce atmospheric electrical discharges illuminating the open waters ahead of the tanker bow')">
-            <img src="photos/Lightning in Gulf Of Mexico.JPEG" alt="Lightning in the Gulf of Mexico" loading="lazy">
+          <div class="gallery-item col-span-7 reveal delay-1" onclick="openGalleryLightbox('photos/optimized/gallery/lightning-gulf-of-mexico.jpg', 'Lightning in the Gulf of Mexico', 'Fierce atmospheric electrical discharges illuminating the open waters ahead of the tanker bow')">
+            <img src="photos/optimized/gallery/lightning-gulf-of-mexico.jpg" alt="Lightning in the Gulf of Mexico" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Lightning in the Gulf of Mexico</div>
               <div class="gallery-item-subtitle">Severe Marine Weather Systems</div>
@@ -1988,26 +1991,26 @@
           </div>
 
           <!-- Waterspout at Sea (5-cols) -->
-          <div class="gallery-item col-span-5 reveal delay-2" onclick="openGalleryLightbox('photos/IMG_9939.JPG', 'Waterspout at Sea', 'A towering atmospheric vortex bridging ocean and cumulus cloud base during deep sea transit')">
-            <img src="photos/IMG_9939.JPG" alt="Waterspout at Sea" loading="lazy">
+          <div class="gallery-item col-span-5 reveal delay-2" onclick="openGalleryLightbox('photos/optimized/gallery/waterspout-at-sea.jpg', 'Waterspout at Sea', 'A towering atmospheric vortex bridging ocean and cumulus cloud base during deep sea transit')">
+            <img src="photos/optimized/gallery/waterspout-at-sea.jpg" alt="Waterspout at Sea" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Waterspout at Sea</div>
               <div class="gallery-item-subtitle">Oceanic Vortex Phenomena</div>
             </div>
           </div>
 
-          <!-- Milky Way over Bridge Wing (4-cols) -->
-          <div class="gallery-item col-span-4 reveal delay-1" onclick="openGalleryLightbox('photos/IMG_6418.JPG', 'Milky Way over Bridge Wing', 'Zero light pollution exposure capturing the galactic core over the ship superstructure')">
-            <img src="photos/IMG_6418.JPG" alt="Milky Way over Vessel Superstructure" loading="lazy">
+          <!-- Deep Sea Night Sky (4-cols) -->
+          <div class="gallery-item col-span-4 reveal delay-1" onclick="openGalleryLightbox('photos/optimized/gallery/ocean-night-sky.jpg', 'Deep Sea Night Sky', 'Open ocean passage under the vast night sky far from coastal light pollution')">
+            <img src="photos/optimized/gallery/ocean-night-sky.jpg" alt="Deep Sea Night Sky" loading="lazy">
             <div class="gallery-item-plate">
-              <div class="gallery-item-title">Milky Way over Bridge Wing</div>
-              <div class="gallery-item-subtitle">Deep Night Ocean Astrophotography</div>
+              <div class="gallery-item-title">Deep Sea Night Sky</div>
+              <div class="gallery-item-subtitle">Night Navigation</div>
             </div>
           </div>
 
           <!-- Sub-Zero Winter Deck Operations (8-cols) -->
-          <div class="gallery-item col-span-8 reveal delay-2" onclick="openGalleryLightbox('photos/IMG_20200106_101438-01.jpeg', 'Sub-Zero Operations', 'Heavy coastal snowfall blanketing tanker deck piping, valves, and manifold lines during terminal loading')">
-            <img src="photos/IMG_20200106_101438-01.jpeg" alt="Sub-Zero Winter Deck Operations" loading="lazy">
+          <div class="gallery-item col-span-8 reveal delay-2" onclick="openGalleryLightbox('photos/optimized/gallery/sub-zero-operations.jpg', 'Sub-Zero Operations', 'Heavy coastal snowfall blanketing tanker deck piping, valves, and manifold lines during terminal loading')">
+            <img src="photos/optimized/gallery/sub-zero-operations.jpg" alt="Sub-Zero Winter Deck Operations" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Sub-Zero Winter Operations</div>
               <div class="gallery-item-subtitle">Arctic Terminal Manifold Operations</div>
@@ -2015,8 +2018,8 @@
           </div>
 
           <!-- Moored at Gellibrand Pier, Melbourne (6-cols) -->
-          <div class="gallery-item col-span-6 reveal delay-1" onclick="openGalleryLightbox('photos/Tanker Moored at Gellibrand Pier, Melbourne.jpeg', 'Moored at Gellibrand Pier, Melbourne', 'Early morning still waters reflecting the laden hull at Gellibrand Pier terminal')">
-            <img src="photos/Tanker Moored at Gellibrand Pier, Melbourne.jpeg" alt="Tanker Moored at Gellibrand Pier, Melbourne" loading="lazy">
+          <div class="gallery-item col-span-6 reveal delay-1" onclick="openGalleryLightbox('photos/optimized/gallery/gellibrand-pier-melbourne.jpg', 'Moored at Gellibrand Pier, Melbourne', 'Early morning still waters reflecting the laden hull at Gellibrand Pier terminal')">
+            <img src="photos/optimized/gallery/gellibrand-pier-melbourne.jpg" alt="Tanker Moored at Gellibrand Pier, Melbourne" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Moored at Gellibrand Pier</div>
               <div class="gallery-item-subtitle">Melbourne Harbor Terminal Transit</div>
@@ -2024,8 +2027,8 @@
           </div>
 
           <!-- Navigator Under Starlight (6-cols) -->
-          <div class="gallery-item col-span-6 reveal delay-2" onclick="openGalleryLightbox('photos/AFREED LP 1.jpg', 'Navigator Under Starlight', 'Long exposure light-painting on deck framing a watchkeeper under infinite ocean stars')">
-            <img src="photos/AFREED LP 1.jpg" alt="Navigator Under Starlight" loading="lazy">
+          <div class="gallery-item col-span-6 reveal delay-2" onclick="openGalleryLightbox('photos/optimized/gallery/navigator-under-starlight.jpg', 'Navigator Under Starlight', 'Long exposure light-painting on deck framing a watchkeeper under infinite ocean stars')">
+            <img src="photos/optimized/gallery/navigator-under-starlight.jpg" alt="Navigator Under Starlight" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Navigator Under Starlight</div>
               <div class="gallery-item-subtitle">Deck Watchkeeper Long Exposure</div>
@@ -2033,8 +2036,8 @@
           </div>
 
           <!-- Fire Drill Preparedness (4-cols) -->
-          <div class="gallery-item col-span-4 reveal delay-1" onclick="openGalleryLightbox('photos/DSC_0225-01.jpeg', 'Preparedness: High-Pressure Boundary Cooling', 'Deck crew deploying high-pressure seawater hoses during mandatory tanker emergency response drill')">
-            <img src="photos/DSC_0225-01.jpeg" alt="Fire Drill Preparedness" loading="lazy">
+          <div class="gallery-item col-span-4 reveal delay-1" onclick="openGalleryLightbox('photos/optimized/gallery/emergency-readiness.jpg', 'Preparedness: High-Pressure Boundary Cooling', 'Deck crew deploying high-pressure seawater hoses during mandatory tanker emergency response drill')">
+            <img src="photos/optimized/gallery/emergency-readiness.jpg" alt="Fire Drill Preparedness" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Emergency Readiness</div>
               <div class="gallery-item-subtitle">Boundary Cooling Safety Drills</div>
@@ -2042,8 +2045,8 @@
           </div>
 
           <!-- Urban Geometry Frankfurt (4-cols) -->
-          <div class="gallery-item col-span-4 reveal delay-2" onclick="openGalleryLightbox('photos/Frankfurt 2.jpg', 'Urban Perspectives — Frankfurt', 'Architectural geometry and twilight reflections during European transit')">
-            <img src="photos/Frankfurt 2.jpg" alt="Frankfurt Urban Perspectives" loading="lazy">
+          <div class="gallery-item col-span-4 reveal delay-2" onclick="openGalleryLightbox('photos/optimized/gallery/frankfurt-urban-geometry.jpg', 'Urban Perspectives — Frankfurt', 'Architectural geometry and twilight reflections during European transit')">
+            <img src="photos/optimized/gallery/frankfurt-urban-geometry.jpg" alt="Frankfurt Urban Perspectives" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Urban Geometry</div>
               <div class="gallery-item-subtitle">Frankfurt Architectural Studies</div>
@@ -2051,8 +2054,8 @@
           </div>
 
           <!-- Transpacific Twilight (4-cols) -->
-          <div class="gallery-item col-span-4 reveal delay-3" onclick="openGalleryLightbox('photos/DSC_0027-01-01.jpeg', 'Transpacific Twilight', 'The tranquil transition from golden hour into deep night in the open Pacific Ocean')">
-            <img src="photos/DSC_0027-01-01.jpeg" alt="Transpacific Twilight Horizon" loading="lazy">
+          <div class="gallery-item col-span-4 reveal delay-3" onclick="openGalleryLightbox('photos/optimized/gallery/transpacific-twilight.jpg', 'Transpacific Twilight', 'The tranquil transition from golden hour into deep night in the open Pacific Ocean')">
+            <img src="photos/optimized/gallery/transpacific-twilight.jpg" alt="Transpacific Twilight Horizon" loading="lazy">
             <div class="gallery-item-plate">
               <div class="gallery-item-title">Transpacific Twilight</div>
               <div class="gallery-item-subtitle">Deep Sea Navigation Watch</div>
