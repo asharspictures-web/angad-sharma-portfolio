@@ -1,0 +1,14 @@
+# Personal Documents & Resume (Strictly excluded from git)
+*.pdf
+LinkedIn-Profile.pdf
+[Rr]esume*
+[Cc][Vv]*
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
