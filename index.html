@@ -112,6 +112,15 @@
     }
 
     @media (max-width: 900px) {
+
+      .career-header-grid {
+        grid-template-columns: 1fr;
+      }
+      .career-action-shot {
+        border-right: 1px solid var(--border-line);
+        border-bottom: 2px solid var(--brass);
+      }
+
       section {
         padding: 90px 0;
       }
@@ -904,6 +913,33 @@
     /* ==========================================================================
        SECTION: MARITIME CAREER (With Tanker Bow Background Photography)
        ========================================================================== */
+    
+    .career-header-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      margin-bottom: 24px;
+      align-items: stretch;
+    }
+
+    .career-action-shot {
+      position: relative;
+      background: var(--abyss-card-solid);
+      border: 1px solid var(--border-line);
+      padding: 12px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+      border-right: 2px solid var(--brass);
+    }
+    
+    .career-action-img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     .career-header-panel {
       background: rgba(6, 9, 14, 0.82);
       backdrop-filter: blur(16px);
@@ -1740,6 +1776,15 @@
     }
 
     @media (max-width: 900px) {
+
+      .career-header-grid {
+        grid-template-columns: 1fr;
+      }
+      .career-action-shot {
+        border-right: 1px solid var(--border-line);
+        border-bottom: 2px solid var(--brass);
+      }
+
       .timeline-track-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -2073,12 +2118,17 @@
       </div>
 
       <div class="container">
-        <div class="career-header-panel reveal">
-          <span class="section-eyebrow">Navigational Log</span>
-          <h2 class="heading-display">20 Years of Operational Command</h2>
-          <p class="lead-paragraph">
-            Proven leadership on world-class tanker fleets. Zero-incident record across complex cargo operations, dry-docking overhauls, and strict oil major vetting regimes.
-          </p>
+        <div class="career-header-grid reveal">
+          <div class="career-header-panel">
+            <span class="section-eyebrow">Navigational Log</span>
+            <h2 class="heading-display">20 Years of Operational Command</h2>
+            <p class="lead-paragraph">
+              Proven leadership on world-class tanker fleets. Zero-incident record across complex cargo operations, dry-docking overhauls, and strict oil major vetting regimes.
+            </p>
+          </div>
+          <div class="career-action-shot">
+            <img src="photos/IMG_2642.JPG" alt="Chief Officer in safety gear on deck at sea" class="career-action-img" loading="lazy">
+          </div>
         </div>
 
         <!-- VISUAL SEA TIME CAREER TIMELINE (Real sea time spanning 20 years: Wallem, Suntech, Synergy) -->
